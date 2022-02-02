@@ -33,6 +33,14 @@ mongoose
   // .then((r) => console.log(r))
   // .catch((e) => console.log(e));
 
-  Recipe.insertMany(data)
-  .then(response => console.log(response))
-  .catch(error => console.log(error))
+  // Recipe.insertMany(data)
+  // .then(response => console.log(response))
+  // .catch(error => console.log(error))
+
+  // Recipe.updateOne({ name: "Garfield" }, { name: "garfield", age: 5 })
+//   .then((cat) => console.log(cat))
+//   .catch((e) => console.log(e));
+
+Recipe.findOneAndUpdate({title:"Rigatoni alla Genovese"},{duration:100})
+.then(response => console.log(response))
+.catch(error => console.log(error))
